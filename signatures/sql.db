@@ -113,6 +113,7 @@ db2_.*[[:space:]]*\(.*\$.*\)
 ->sqliteCreate(Agregate|Collation|Function)[[:space:]]*\(
 ->create(Aggregate|Collation|Function)[[:space:]]*\(
 querySingle[[:space:]]*\(
+[A-Z]+::expr\(.*\$.*\)
 [Ww][Hh][Ee][Rr][Ee][[:space:]]+.*=[[:space:]]*\{\}
 [Aa][Nn][Dd][[:space:]]+.*=[[:space:]]*\{\}
 \.filter[[:space:]]*\([[:space:]]*text[[:space:]]*\([^\)]+%s
