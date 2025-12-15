@@ -16,3 +16,4 @@ ApexXSSFromURLParam
 #[[:space:]]*rubocop:disable.*
 #pragma warning disable EF1000
 @codingStandardsIgnore
+#[[:space:]]*nosec
