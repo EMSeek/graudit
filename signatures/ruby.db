@@ -48,6 +48,7 @@ execve[[:space:]]*\(
 # Ruby - Unsafe Reflection
 params\[:[a-zA-Z0-9_]+\]\.constantize
 new[[:space:]]*\(params\[:[a-zA-Z0-9_]+\]
+redirect_to[[:space:]]+(url_from[[:space:]]*\()?[Pp][Aa][Rr][Aa][Mm][a-z]*\[[^]]+\]
 map.connect[[:space:]]+['"]:controller/:action/:id['"]
 match[[:space:]]+['"]:controller\(/:action\(/:id\(.:format\)\)\)['"]
 \.((destroy|delete|update|find)_(all|by)(_name|_sql)?|(re)?where|having|not)[[:space:]]*\([[:space:]]*["'].*\#\{
