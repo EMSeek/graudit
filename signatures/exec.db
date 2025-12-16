@@ -29,11 +29,12 @@ proc_nice([[:space:]]*\(|[[:space:]]+).*\)?
 proc_terminate([[:space:]]*\(|[[:space:]]+).*\)?
 shell_exec([[:space:]]*\(|[[:space:]]+).*\)?
 system([[:space:]]*\(|[[:space:]]+[\"\']).*\)?
-\.instance_eval.*
+(class|module|instance)_eval([[:space:]]+.*|[[:space:]]*\()
 eval([[:space:]]*\(|[[:space:]]+[^\(])
 spawn([[:space:]]*\(|[[:space:]]+[^\(])
 system([[:space:]]*\(|[[:space:]]+").*\#\{[^\}]+\}
 system[[:space:]]*\(
+exec[[:space:]]*\(
 \.open[[:space:]]*\(
 \.(public_)?send[[:space:]]*\(
 `.*#\{[^`]+`
