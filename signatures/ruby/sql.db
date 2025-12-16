@@ -4,3 +4,5 @@
 \.exists\?.*:
 \.find_(or_(create|initialize)_)?by!?.*:
 Arel\.sql\(.*["'].*#\{
+conditions[[:space:]]*[:=>]+[[:space:]]*.*\#\{[^\}]+\}
+\.where[[:space:]]*\([[:space:]]*['"].*['"][[:space:]]*\+

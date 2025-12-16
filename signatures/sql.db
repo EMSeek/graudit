@@ -132,6 +132,8 @@ querySingle[[:space:]]*\(
 \.exists\?.*:
 \.find_(or_(create|initialize)_)?by!?.*:
 Arel\.sql\(.*["'].*#\{
+conditions[[:space:]]*[:=>]+[[:space:]]*.*\#\{[^\}]+\}
+\.where[[:space:]]*\([[:space:]]*['"].*['"][[:space:]]*\+
 (WHERE|where)[[:space:]]+.*=.*[\'\"][[:space:]]*\+.*
 [\'\" ]+AND[[:space:]]+.*=.*\+.*
 (LIKE|like)[[:space:]]+[^\;]+\+.*
