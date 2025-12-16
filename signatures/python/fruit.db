@@ -1,1 +1,2 @@
-\.execute[[:space:]]*\([\"\'].*%.*[\"\'][[:space:]]*%.*\)
+exec[[:space:]]*\(.*["'][[:space:]]*\+
+\.execute[[:space:]]*\([[:space:]]*["'].*%.*["'][[:space:]]*%.*\)

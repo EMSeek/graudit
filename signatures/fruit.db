@@ -116,7 +116,8 @@ pg_query[[:space:]]*\(.*\$(_ENV|_GET|_POST|_COOKIE|_REQUEST|_SERVER|HTTP|http).*
 (ORDER[[:space:]]+BY|order[[:space:]]+by)[[:space:]]+.*\$(_ENV|_GET|_POST|_COOKIE|_REQUEST|_SERVER|HTTP|http)
 (LIMIT|limit)[[:space:]]+.*\$(_ENV|_GET|_POST|_COOKIE|_REQUEST|_SERVER|HTTP|http)
 VALUES[[:space:]]*\([^\)]*\$(_ENV|_GET|_POST|_COOKIE|_REQUEST|_SERVER|HTTP|http)
-\.execute[[:space:]]*\([\"\'].*%.*[\"\'][[:space:]]*%.*\)
+exec[[:space:]]*\(.*["'][[:space:]]*\+
+\.execute[[:space:]]*\([[:space:]]*["'].*%.*["'][[:space:]]*%.*\)
 ^[[:space:]]*`[^`]*#\{[^\}]+\}.*`
 (exec|system)[[:space:]]*\([[:space:]]*['"][^'"]*\#\{[^\}]+[^\)]*\)
 [=\(][[:space:]]*`[^`]*#\{[^\}]+.*\}
