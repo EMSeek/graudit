@@ -118,7 +118,9 @@ pg_query[[:space:]]*\(.*\$(_ENV|_GET|_POST|_COOKIE|_REQUEST|_SERVER|HTTP|http).*
 VALUES[[:space:]]*\([^\)]*\$(_ENV|_GET|_POST|_COOKIE|_REQUEST|_SERVER|HTTP|http)
 \.execute[[:space:]]*\([\"\'].*%.*[\"\'][[:space:]]*%.*\)
 ^[[:space:]]*`[^`]*#\{[^\}]+\}.*`
+(exec|system)[[:space:]]*\([[:space:]]*['"][^'"]*\#\{[^\}]+[^\)]*\)
 [=\(][[:space:]]*`[^`]*#\{[^\}]+.*\}
+content_tag[[:space:]]+.*["'][^"']*\#\{[^\}]+\}
 render[[:space:]]+:?(text|plain):?.*#\{[Pp][Aa][Rr][Aa][Mm][^\}]*\}
 File\.(read|new|open|delete|write)[[:space:]]*\("[^"]*\#\{[^\}]+[^\)]*\)
 ['"(: ][Ss][Ee][Ll][Ee][Cc][Tt][[:space:]]+.*#\{[^\}]+
