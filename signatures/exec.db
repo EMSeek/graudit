@@ -47,6 +47,8 @@ subprocess[[:space:]]\(
 execfile
 eval[[:space:]]*\(
 fork[[:space:]]*\(
+\.trycmd[[:space:]]*\(
+run_as_root[[:space:]]*=[[:space:]]*True
 (class|module|instance)_eval([[:space:]]+.*|[[:space:]]*\()
 eval([[:space:]]*\(|[[:space:]]+[^\(])
 spawn([[:space:]]*\(|[[:space:]]+[^\(])

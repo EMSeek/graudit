@@ -16,3 +16,5 @@ subprocess[[:space:]]\(
 execfile
 eval[[:space:]]*\(
 fork[[:space:]]*\(
+\.trycmd[[:space:]]*\(
+run_as_root[[:space:]]*=[[:space:]]*True
