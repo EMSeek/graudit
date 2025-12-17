@@ -116,19 +116,19 @@ pg_query[[:space:]]*\(.*\$(_ENV|_GET|_POST|_COOKIE|_REQUEST|_SERVER|HTTP|http).*
 (ORDER[[:space:]]+BY|order[[:space:]]+by)[[:space:]]+.*\$(_ENV|_GET|_POST|_COOKIE|_REQUEST|_SERVER|HTTP|http)
 (LIMIT|limit)[[:space:]]+.*\$(_ENV|_GET|_POST|_COOKIE|_REQUEST|_SERVER|HTTP|http)
 VALUES[[:space:]]*\([^\)]*\$(_ENV|_GET|_POST|_COOKIE|_REQUEST|_SERVER|HTTP|http)
-exec[[:space:]]*\(.*["'][[:space:]]*\+
+exec[[:space:]]*\([^\);]*["'][[:space:]]*\+
 \.execute[[:space:]]*\([[:space:]]*["'].*%.*["'][[:space:]]*%.*\)
 WHERE id[[:space:]]*=[[:space:]]*\{[^\}]+\}
 ^[[:space:]]*`[^`]*#\{[^\}]+\}.*`
-(exec|system)[[:space:]]*\([[:space:]]*['"][^'"]*\#\{[^\}]+[^\)]*\)
+(exec|system)[[:space:]]*\([[:space:]]*['"][^'"]*#\{[^\}]+[^\)]*\)
 [=\(][[:space:]]*`[^`]*#\{[^\}]+.*\}
-content_tag[[:space:]]+.*["'][^"']*\#\{[^\}]+\}
+content_tag[[:space:]]+.*["'][^"']*#\{[^\}]+\}
 render[[:space:]]+:?(text|plain):?.*#\{[Pp][Aa][Rr][Aa][Mm][^\}]*\}
 File\.(read|new|open|delete|write)[[:space:]]*\("[^"]*\#\{[^\}]+[^\)]*\)
 ['"(: ][Ss][Ee][Ll][Ee][Cc][Tt][[:space:]]+.*#\{[^\}]+
 (WHERE|where)[[:space:]]+.*=[[:space:]]*['"]*#\{[^\}]+
 [\'\" ]+AND[[:space:]]+.*=.*\+[[:space:]]*#\{[^\}]+
-(LIKE|like)[[:space:]]+.*#\{[^\}]+
+(LIKE|like)[[:space:]]+[^\}\);]*#\{[^\}]+
 (ORDER[[:space:]]+BY|order[[:space:]]+by)[[:space:]]+.*\+[[:space:]]*#\{[^\}]+
 ['" ](LIMIT|limit)[[:space:]]+.*#\{[^\}]+
 File\.(read|new|open|delete)[[:space:]]*\(.*\#\{[^\}]+\}

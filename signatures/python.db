@@ -23,7 +23,7 @@ fork[[:space:]]*\(
 \.run[[:space:]]*\(.*[Dd]ebug[[:space:]]*=[[:space:]]*True
 \.secret_key[[:space:]]*=[[:space:]]*['"][^'"]+
 render_template_string[[:space:]]*\(.*\{[^\}]+\}
-exec[[:space:]]*\(.*["'][[:space:]]*\+
+exec[[:space:]]*\([^\);]*["'][[:space:]]*\+
 \.execute[[:space:]]*\([[:space:]]*["'].*%.*["'][[:space:]]*%.*\)
 WHERE id[[:space:]]*=[[:space:]]*\{[^\}]+\}
 autoescape[[:space:]]*=[[:space:]]*[Ff][Aa][Ll][Ss][Ee]

@@ -13,15 +13,15 @@ File\.(read|new|open|delete)[[:space:]]*\([^\)]+\)
 send_file([[:space:]]*\(|[[:space:]]+[^\(])
 (Pathname.*|File)\.join[[:space:]]*\(.*[Pp][Aa][Rr][Aa][Mm]
 ^[[:space:]]*`[^`]*#\{[^\}]+\}.*`
-(exec|system)[[:space:]]*\([[:space:]]*['"][^'"]*\#\{[^\}]+[^\)]*\)
+(exec|system)[[:space:]]*\([[:space:]]*['"][^'"]*#\{[^\}]+[^\)]*\)
 [=\(][[:space:]]*`[^`]*#\{[^\}]+.*\}
-content_tag[[:space:]]+.*["'][^"']*\#\{[^\}]+\}
+content_tag[[:space:]]+.*["'][^"']*#\{[^\}]+\}
 render[[:space:]]+:?(text|plain):?.*#\{[Pp][Aa][Rr][Aa][Mm][^\}]*\}
 File\.(read|new|open|delete|write)[[:space:]]*\("[^"]*\#\{[^\}]+[^\)]*\)
 ['"(: ][Ss][Ee][Ll][Ee][Cc][Tt][[:space:]]+.*#\{[^\}]+
 (WHERE|where)[[:space:]]+.*=[[:space:]]*['"]*#\{[^\}]+
 [\'\" ]+AND[[:space:]]+.*=.*\+[[:space:]]*#\{[^\}]+
-(LIKE|like)[[:space:]]+.*#\{[^\}]+
+(LIKE|like)[[:space:]]+[^\}\);]*#\{[^\}]+
 (ORDER[[:space:]]+BY|order[[:space:]]+by)[[:space:]]+.*\+[[:space:]]*#\{[^\}]+
 ['" ](LIMIT|limit)[[:space:]]+.*#\{[^\}]+
 File\.(read|new|open|delete)[[:space:]]*\(.*\#\{[^\}]+\}
