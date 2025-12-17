@@ -25,7 +25,13 @@ fork[[:space:]]*\(
 render_template_string[[:space:]]*\(.*\{[^\}]+\}
 exec[[:space:]]*\([^\);]*["'][[:space:]]*\+
 \.execute[[:space:]]*\([[:space:]]*["'].*%.*["'][[:space:]]*%.*\)
-WHERE id[[:space:]]*=[[:space:]]*\{[^\}]+\}
+[Ss][Ee][Ll][Ee][Cc][Tt][[:space:]]+[A-Za-z0-9]+[[:space:]]*=[[:space:]]*\{[^\}]+\}
+FROM[[:space:]]+[A-Za-z0-9]+[[:space:]]*=[[:space:]]*\{[^\}]+\}
+(WHERE|where)[[:space:]]+[A-Za-z0-9]+[[:space:]]*=[[:space:]]*\{[^\}]+\}
+[\'\" ]+(AND|and)[[:space:]]+[A-Za-z0-9]+[[:space:]]*=[[:space:]]*\{[^\}]+\}
+(LIKE|like)[[:space:]]+[^\}\);]*\{[^\}]+\}
+(ORDER[[:space:]]+BY|order[[:space:]]+by)[[:space:]]+[^\}\);]*\{[^\}]+\}
+['" ](LIMIT|limit)[[:space:]]+[^\}\);]*\{[^\}]+\}
 autoescape[[:space:]]*=[[:space:]]*[Ff][Aa][Ll][Ss][Ee]
 [Vv][Ee][Rr][Ii][Ff][Yy]_([Ee][Xx][Pp]|[Ss][Ii][Gg][Nn][Aa][Tt][Uu][Rr][Ee])[^:]*:.?False
 [Aa]lgorithms?[[:space:]]*=[[:space:]]*\[?[[:space:]]*["']none["']
