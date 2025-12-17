@@ -6,3 +6,4 @@ getElementsByTagName\([^\)]*([Ss][Cc][Rr][Ii][Pp][Tt]|[Ii][Ff][Rr][Aa][Mm][Ee])
 ['`\"][^'`\"\)\;]+\.js
 reactjs.org/docs/error-decoder
 EventListener\([ "']+[Kk][Ee][Yy]
+eval[[:space:]]*\([^\)\;]+['"][[:space:]]*\+[[:space:]]*[^'"]+
