@@ -1,2 +1,3 @@
 exec[[:space:]]*\(.*["'][[:space:]]*\+
 \.execute[[:space:]]*\([[:space:]]*["'].*%.*["'][[:space:]]*%.*\)
+WHERE id[[:space:]]*=[[:space:]]*\{[^\}]+\}

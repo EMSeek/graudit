@@ -15,7 +15,7 @@ remove[[:space:]]*\(
 \.unlink[[:space:]]*\(
 link[[:space:]]*\(
 input[[:space:]]*\(
-compile
+compile[[:space:]]*\(
 tmpfile
 tmpnam
 getlogin
@@ -36,7 +36,7 @@ SmartCookie
 SerialParser
 multiprocessing
 shelve
-[[:space:]]+astdisable
-[[:space:]]+parser
-[[:space:]]+compiler
+import[[:space:]]+ast
+import[[:space:]]+parser
+import[[:space:]]+compiler
 urllib3.disable_warnings

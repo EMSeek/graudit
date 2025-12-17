@@ -118,6 +118,7 @@ pg_query[[:space:]]*\(.*\$(_ENV|_GET|_POST|_COOKIE|_REQUEST|_SERVER|HTTP|http).*
 VALUES[[:space:]]*\([^\)]*\$(_ENV|_GET|_POST|_COOKIE|_REQUEST|_SERVER|HTTP|http)
 exec[[:space:]]*\(.*["'][[:space:]]*\+
 \.execute[[:space:]]*\([[:space:]]*["'].*%.*["'][[:space:]]*%.*\)
+WHERE id[[:space:]]*=[[:space:]]*\{[^\}]+\}
 ^[[:space:]]*`[^`]*#\{[^\}]+\}.*`
 (exec|system)[[:space:]]*\([[:space:]]*['"][^'"]*\#\{[^\}]+[^\)]*\)
 [=\(][[:space:]]*`[^`]*#\{[^\}]+.*\}

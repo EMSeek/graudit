@@ -20,8 +20,12 @@ eval[[:space:]]*\(
 fork[[:space:]]*\(
 \.NamedTemporaryFile[[:space:]]*\(.*\)
 \.chmod[[:space:]]*\(
+\.run[[:space:]]*\(.*[Dd]ebug[[:space:]]*=[[:space:]]*True
+\.secret_key[[:space:]]*=[[:space:]]*['"][^'"]+
+render_template_string[[:space:]]*\(.*\{[^\}]+\}
 exec[[:space:]]*\(.*["'][[:space:]]*\+
 \.execute[[:space:]]*\([[:space:]]*["'].*%.*["'][[:space:]]*%.*\)
+WHERE id[[:space:]]*=[[:space:]]*\{[^\}]+\}
 autoescape[[:space:]]*=[[:space:]]*[Ff][Aa][Ll][Ss][Ee]
 [Vv][Ee][Rr][Ii][Ff][Yy]_([Ee][Xx][Pp]|[Ss][Ii][Gg][Nn][Aa][Tt][Uu][Rr][Ee])[^:]*:.?False
 [Aa]lgorithms?[[:space:]]*=[[:space:]]*\[?[[:space:]]*["']none["']
@@ -48,7 +52,7 @@ remove[[:space:]]*\(
 \.unlink[[:space:]]*\(
 link[[:space:]]*\(
 input[[:space:]]*\(
-compile
+compile[[:space:]]*\(
 tmpfile
 tmpnam
 getlogin
@@ -69,9 +73,9 @@ SmartCookie
 SerialParser
 multiprocessing
 shelve
-[[:space:]]+astdisable
-[[:space:]]+parser
-[[:space:]]+compiler
+import[[:space:]]+ast
+import[[:space:]]+parser
+import[[:space:]]+compiler
 urllib3.disable_warnings
 c?[Pp]ickle\.(loads|dumps)[[:space:]]*\(
 [Ww][Hh][Ee][Rr][Ee][[:space:]]+.*=[[:space:]]*\{\}
