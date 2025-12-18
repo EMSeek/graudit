@@ -1,1 +1,1 @@
-[Yy][Aa][Mm][Ll]\.load[[:space:]]*\(
+[Yy][Aa][Mm][Ll]\.(dump|load)[[:space:]]*\(
