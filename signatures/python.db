@@ -7,7 +7,7 @@ execlp[[:space:]]*\(
 execle[[:space:]]*\(
 execvp[[:space:]]*\(
 \.system[[:space:]]*\([^\)]+\)
-[Pp]open[[:space:]]*\(
+[Pp]open[234]?[[:space:]]*\(
 openpty[[:space:]]*\(
 [Pp][Ii][Pp][Ee][[:space:]]*\(
 pipes
@@ -15,11 +15,13 @@ exec[[:space:]]*\(
 spawn[[:space:]]\(
 shell[[:space:]]\(
 subprocess[[:space:]]\(
+\.getoutput[[:space:]]*\(
 execfile
 eval[[:space:]]*\(
 fork[[:space:]]*\(
 \.trycmd[[:space:]]*\(
 run_as_root[[:space:]]*=[[:space:]]*True
+,[[:space:]]*shell[[:space:]]*=[[:space:]]*True
 \.NamedTemporaryFile[[:space:]]*\(.*\)
 \.chmod[[:space:]]*\(
 \.run[[:space:]]*\(.*[Dd]ebug[[:space:]]*=[[:space:]]*True
@@ -98,6 +100,11 @@ c?[Pp]ickle\.(loads|dumps)[[:space:]]*\(
 \.load_extension[[:space:]]*\(
 \.set_authorizer[[:space:]]*\(
 \.set_progress_handler[[:space:]]*\(
+\.set_missing_host_key_policy[[:space:]]*\([^\)]+\.AutoAddPolicy
+\.exec_command[[:space:]]*\(
+\.(post|get|head)[[:space:]]*\([^,]+,[[:space:]]*verify[[:space:]]*=[[:space:]]*False
+SSLv2_METHOD
+\.generate_private_key[[:space:]]*\(
 \.startswith\(
 \.urlopen\(
-[Yy][Aa][Mm][Ll]\.load[[:space:]]*\(
+[Yy][Aa][Mm][Ll]\.(dump|load)[[:space:]]*\(

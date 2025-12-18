@@ -5,7 +5,7 @@ execlp[[:space:]]*\(
 execle[[:space:]]*\(
 execvp[[:space:]]*\(
 \.system[[:space:]]*\([^\)]+\)
-[Pp]open[[:space:]]*\(
+[Pp]open[234]?[[:space:]]*\(
 openpty[[:space:]]*\(
 [Pp][Ii][Pp][Ee][[:space:]]*\(
 pipes
@@ -13,8 +13,10 @@ exec[[:space:]]*\(
 spawn[[:space:]]\(
 shell[[:space:]]\(
 subprocess[[:space:]]\(
+\.getoutput[[:space:]]*\(
 execfile
 eval[[:space:]]*\(
 fork[[:space:]]*\(
 \.trycmd[[:space:]]*\(
 run_as_root[[:space:]]*=[[:space:]]*True
+,[[:space:]]*shell[[:space:]]*=[[:space:]]*True
