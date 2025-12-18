@@ -1,4 +1,6 @@
 \.extractall[[:space:]]*\(
+RawSQL[[:space:]]*\(
+\.extra[[:space:]]*\(.*tables=
 csrf[\._]exempt
 exec([vl][pe]*)?[[:space:]]*\(
 \.system[[:space:]]*\([^\)]+\)
