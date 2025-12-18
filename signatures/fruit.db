@@ -46,7 +46,7 @@ eval[[:space:]]*\([^\)\;\"]*([Rr]eq(uest)?[\.\)]|\.[Gg]et[Pp]aram[[:space:]]*[\[
 (WHERE|where)[[:space:]]+[^;]+=[[:space:]]*[\'\"][\'\"]?[[:space:]]*\+[[:space:]]*[^\"\']+
 [\'\" ]+AND[[:space:]]+.*=[[:space:]]*[\'\"][\'\"]?[[:space:]]*\+[[:space:]]*[^\"\']
 (LIKE|like)[[:space:]]+[\'\"A-Za-z0-9%]+[\'\"][\'\"]?[[:space:]]*\+[[:space:]]*[^\"\']
-(ORDER[[:space:]]+BY|order[[:space:]]+by)[[:space:]]+.*[\'\"][\'\"]?[[:space:]]*\+[[:space:]]*[^\"\']
+(ORDER[[:space:]]+BY|order[[:space:]]+by)[[:space:]]+[A-Za-z0-9_, -]*[\'\"][\'\"]?[[:space:]]*\+[[:space:]]*[^\"\']
 (LIMIT|limit)[[:space:]]+([0-9,]+)?[;:space:]]*[\'\"][\'\"]?[[:space:]]*\+[[:space:]]*[^\"\']
 \.query\([^\);]*[\'\"][[:space:]]*\+[[:space:]]*[^\'\"]+
 eval[[:space:]]*\([^\)\;]+[\'\"][[:space:]]*\+[[:space:]]*[^\'\"]+
@@ -123,7 +123,7 @@ FROM[[:space:]]+[A-Za-z0-9]+[[:space:]]*=[[:space:]]*\{[^\}]+\}
 (WHERE|where)[[:space:]]+[A-Za-z0-9]+[[:space:]]*=[[:space:]]*\{[^\}]+\}
 [\'\" ]+(AND|and)[[:space:]]+[A-Za-z0-9]+[[:space:]]*=[[:space:]]*\{[^\}]+\}
 (LIKE|like)[[:space:]]+[^\}\);]*\{[^\}]+\}
-(ORDER[[:space:]]+BY|order[[:space:]]+by)[[:space:]]+[^\}\);]*\{[^\}]+\}
+(ORDER[[:space:]]+BY|order[[:space:]]+by)[[:space:]]+[A-Za-z0-9_, -]*\{[^\}]+\}
 ['" ](LIMIT|limit)[[:space:]]+[^\}\);]*\{[^\}]+\}
 ^[[:space:]]*`[^`]*#\{[^\}]+\}.*`
 (exec|system)[[:space:]]*\([[:space:]]*['"][^'"]*#\{[^\}]+[^\)]*\)
@@ -144,6 +144,6 @@ SQL[[:space:]]*\([^\)\;]+[\'\"][[:space:]]*\+[[:space:]]*[^\'\"]+
 (WHERE|where)[[:space:]]+[^\;:\)]+(=|[Ii][[Nn][[:space:]]+[\+\"\(]).*\$\{
 [\'\" ]+AND[[:space:]]+.*=[[:space:]]?\$\{[^\}]+\}
 (LIKE|like)[[:space:]]+(['"][^\'\"]*)?\$\{[^\}]+\}
-(ORDER[[:space:]]+BY|order[[:space:]]+by)[[:space:]]+.*\$\{[^\}]+\}
+(ORDER[[:space:]]+BY|order[[:space:]]+by)[[:space:]]+[A-Za-z0-9_, -]*\$\{[^\}]+\}
 (LIMIT|limit)[[:space:]]+([0-9 ]+,? ?)?\$\{[^\}]+\}
 (spawn|execFile|\.exec)(Sync)?[[:space:]]\(.*(\$\{[^\}]+\}|\.query|\.param)
